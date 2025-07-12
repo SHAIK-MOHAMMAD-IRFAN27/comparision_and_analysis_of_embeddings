@@ -1,7 +1,7 @@
 # comparision_and_analysis_of_embeddings
-# 🧠 Word Representations Comparison: BoW, TF-IDF, CBOW, and Skip-Gram
+#  Word Representations Comparison: BoW, TF-IDF, CBOW, and Skip-Gram
 
-## 📌 Project Overview
+##  Project Overview
 
 This project explores and compares **four different word representation techniques** using a small custom text corpus:
 
@@ -18,9 +18,9 @@ Our goal is to understand how these representations differ in:
 
 ---
 
-## 📖 Word Representation Techniques Explained
+##  Word Representation Techniques Explained
 
-### 1. 🧺 Bag of Words (BoW)
+### 1.  Bag of Words (BoW)
 
 - Counts the frequency of each word in the document.
 - Simple, fast, but ignores word order and semantics.
@@ -31,7 +31,7 @@ Our goal is to understand how these representations differ in:
 
 ---
 
-### 2. 🧮 TF-IDF (Term Frequency–Inverse Document Frequency)
+### 2.  TF-IDF (Term Frequency–Inverse Document Frequency)
 
 - Weighs words by frequency in a document but penalizes common words across documents.
 - Reduces importance of common words like "the", "is".
@@ -45,7 +45,7 @@ In the notebook:
 
 ---
 
-### 3. 🧠 CBOW (Continuous Bag of Words)
+### 3.  CBOW (Continuous Bag of Words)
 
 - Predicts the **center word** from its surrounding **context**.
 - Learns dense, low-dimensional embeddings from co-occurrence patterns.
@@ -56,7 +56,7 @@ In the notebook:
 
 ---
 
-### 4. 🔁 Skip-Gram
+### 4.  Skip-Gram
 
 - Does the reverse of CBOW: given the center word, predicts the surrounding context.
 - Especially good for learning representations of rare words.
@@ -66,9 +66,9 @@ In the notebook:
 
 ---
 
-## 🧾 Dataset and Preprocessing
+##  Dataset and Preprocessing
 
-- A small text corpus is used (sample paragraph or article).
+- A IMDB movie reviews dataset used
 - Tokenized using regex-based word extraction.
 - A vocabulary is built with `<PAD>` and `<UNK>` tokens.
 - For CBOW and Skip-Gram:
@@ -77,7 +77,7 @@ In the notebook:
 
 ---
 
-## 🏗️ Model Architecture (CBOW & Skip-Gram)
+##  Model Architecture (CBOW & Skip-Gram)
 
 Implemented from scratch using PyTorch.
 
@@ -88,7 +88,7 @@ Both use:
 
 ---
 
-## 🏋️ Training Details
+##  Training Details
 
 - Optimizer: `torch.optim.SGD`
 - Epochs: 5
@@ -97,7 +97,7 @@ Both use:
 
 ---
 
-## 📊 Visualization
+##  Visualization
 
 - **PCA** and **t-SNE** are used to project embeddings into 2D space
 - Selected word embeddings (e.g., `['good', 'bad', 'movie', ...]`) are plotted
@@ -105,15 +105,15 @@ Both use:
 
 ---
 
-## 🔍 Example Observations
+##  Example Observations
 
-### ➤ BoW & TF-IDF:
+###  BoW & TF-IDF:
 - Easy to understand
 - BoW treats all words equally (no down-weighting)
 - TF-IDF down-weights frequent terms like "the", "is"
 - Vectors are high-dimensional and sparse
 
-### ➤ CBOW & Skip-Gram:
+###  CBOW & Skip-Gram:
 - Dense, low-dimensional (e.g., 50 or 100D)
 - Capture context semantics
 - In visual plots:
@@ -122,7 +122,7 @@ Both use:
 
 ---
 
-## 📈 Sample Code Snippets
+##  Sample Code Snippets
 
 ### Cosine Similarity of Embeddings
 ```python
